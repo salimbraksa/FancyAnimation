@@ -12,7 +12,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     // MARK: - Child View Controller
     
-    fileprivate var firstNavigationController: FirstViewController!
+    fileprivate var firstViewController: FirstViewController!
     
     // MARK: - Super Methods
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         // Configure child navigation controller
         guard let childNavigationController = childController as? UINavigationController else { return }
         childNavigationController.delegate = self
-        firstNavigationController = childNavigationController.viewControllers.first as! FirstViewController
+        firstViewController = childNavigationController.viewControllers.first as! FirstViewController
         
     }
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     // MARK: - User Interaction
     
     @IBAction func addButton() {
-        firstNavigationController.performSegue(withIdentifier: "toB", sender: nil)
+        firstViewController.performSegue(withIdentifier: "toB", sender: nil)
     }
     
 }
