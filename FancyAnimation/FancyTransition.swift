@@ -40,7 +40,7 @@ class FancyTransition: NSObject, UIViewControllerAnimatedTransitioning, CAAnimat
     // MARK: - UIViewControllerAnimatedTransitioning Protocol Methods
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
+        return 0.3
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -60,12 +60,29 @@ class FancyTransition: NSObject, UIViewControllerAnimatedTransitioning, CAAnimat
             transitionContext.completeTransition(true)
         }
         
-        // Fill In or Out the container view
-        
         if reversed {
+            
             fillOutAnimation(view: containerView)
+            
+            let animationAddButtonView = sender.superview!.subviews.last!
+            UIView.animate(withDuration: duration, animations: { 
+                animationAddButtonView.frame.origin = self.sender.frame.origin
+            }, completion: { _ in
+                animationAddButtonView.removeFromSuperview()
+            })
+            
         } else {
+            
             fillInAnimation(view: containerView)
+            
+            // Disable constraints before animating
+            let animationAddButtonView = AddButtonView(frame: sender.frame)
+            animationAddButtonView.layer.cornerRadius = sender.layer.cornerRadius
+            sender.superview!.addSubview(animationAddButtonView)
+            UIView.animate(withDuration: duration) {
+                animationAddButtonView.frame.origin = self.containerView.convert(self.fillLocation, to: self.sender.superview!)
+            }
+            
         }
         
         // Apply a simple transition between source & destination view

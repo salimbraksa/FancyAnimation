@@ -16,6 +16,8 @@
 		F4053C4C1E626206005C8C7E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4053C4B1E626206005C8C7E /* SecondViewController.swift */; };
 		F4053C4E1E62C7C0005C8C7E /* FancyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4053C4D1E62C7C0005C8C7E /* FancyTransition.swift */; };
 		F4053C521E62D4BB005C8C7E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4053C511E62D4BB005C8C7E /* Extensions.swift */; };
+		F4053C541E62E4F3005C8C7E /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4053C531E62E4F3005C8C7E /* AddButtonView.swift */; };
+		F4053C561E62E4FD005C8C7E /* AddButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4053C551E62E4FD005C8C7E /* AddButtonView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F4053C4B1E626206005C8C7E /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F4053C4D1E62C7C0005C8C7E /* FancyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTransition.swift; sourceTree = "<group>"; };
 		F4053C511E62D4BB005C8C7E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F4053C531E62E4F3005C8C7E /* AddButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
+		F4053C551E62E4FD005C8C7E /* AddButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddButtonView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				F4053C481E6261D6005C8C7E /* Supporting Files */,
 				F4053C3A1E625FFA005C8C7E /* Main.storyboard */,
 				F4053C4D1E62C7C0005C8C7E /* FancyTransition.swift */,
+				F4053C531E62E4F3005C8C7E /* AddButtonView.swift */,
+				F4053C551E62E4FD005C8C7E /* AddButtonView.xib */,
 			);
 			path = FancyAnimation;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			files = (
 				F4053C411E625FFA005C8C7E /* LaunchScreen.storyboard in Resources */,
 				F4053C3E1E625FFA005C8C7E /* Assets.xcassets in Resources */,
+				F4053C561E62E4FD005C8C7E /* AddButtonView.xib in Resources */,
 				F4053C3C1E625FFA005C8C7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4053C541E62E4F3005C8C7E /* AddButtonView.swift in Sources */,
 				F4053C4E1E62C7C0005C8C7E /* FancyTransition.swift in Sources */,
 				F4053C521E62D4BB005C8C7E /* Extensions.swift in Sources */,
 				F4053C4C1E626206005C8C7E /* SecondViewController.swift in Sources */,

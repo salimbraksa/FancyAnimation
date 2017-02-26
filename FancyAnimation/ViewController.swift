@@ -13,8 +13,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     // MARK: - Views
     
     @IBOutlet fileprivate weak var containerView: UIView!
-    @IBOutlet weak var addButtonView: UIView!
+    @IBOutlet weak var addButtonView: AddButtonView!
     fileprivate var firstViewController: FirstViewController!
+    
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Configure addButtonView
+        addButtonView.addButton.addTarget(self, action: #selector(addButtonHandler), for: .touchUpInside)
+        
+    }
     
     // MARK: - Super Methods
 
@@ -42,7 +52,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     
     // MARK: - User Interaction
     
-    @IBAction func addButtonHandler() {
+    @objc private func addButtonHandler() {
         
         let identifier = "toB"
         if firstViewController.shouldPerformSegue(withIdentifier: identifier, sender: nil) {
