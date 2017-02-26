@@ -8,18 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate {
+    
+    // MARK: - Child View Controller
+    
+    fileprivate var firstNavigationController: FirstViewController!
+    
+    // MARK: - Super Methods
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func addChildViewController(_ childController: UIViewController) {
+        super.addChildViewController(childController)
+        
+        // Configure child navigation controller
+        guard let childNavigationController = childController as? UINavigationController else { return }
+        childNavigationController.delegate = self
+        firstNavigationController = childNavigationController.viewControllers.first as! FirstViewController
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - UINavigationControllerDelegate Protocol Methods
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
     }
-
-
+    
+    // MARK: - User Interaction
+    
+    @IBAction func addButton() {
+        firstNavigationController.performSegue(withIdentifier: "toB", sender: nil)
+    }
+    
 }
 
