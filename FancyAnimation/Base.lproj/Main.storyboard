@@ -42,8 +42,9 @@
                                             <constraint firstItem="eCZ-QY-53M" firstAttribute="centerX" secondItem="xFe-c6-KpA" secondAttribute="centerX" id="l87-LH-G8d"/>
                                         </constraints>
                                     </view>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-KF-o0f">
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jni-KF-o0f">
                                         <rect key="frame" x="0.0" y="297" width="375" height="370"/>
+                                        <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="ftY-P7-FCz" kind="embed" id="Qxt-Re-iqX"/>
                                         </connections>
@@ -61,7 +62,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="addButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCP-pw-V7P"/>
+                                            <action selector="addButtonHandler" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRx-Ud-yIc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -87,6 +88,10 @@
                             <constraint firstItem="97l-3p-61i" firstAttribute="bottom" secondItem="xFe-c6-KpA" secondAttribute="bottom" constant="25" id="eoN-a4-bPg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButtonView" destination="97l-3p-61i" id="Eph-SS-LcF"/>
+                        <outlet property="containerView" destination="Jni-KF-o0f" id="RXm-rh-QD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.94222193519999997" blue="0.93022841840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZcL-nV-5td" firstAttribute="centerY" secondItem="HSv-K6-d5D" secondAttribute="centerY" id="QCj-F3-bJh"/>
                             <constraint firstItem="ZcL-nV-5td" firstAttribute="centerX" secondItem="HSv-K6-d5D" secondAttribute="centerX" id="T3C-dd-9Fa"/>
@@ -169,7 +174,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.94222193519999997" blue="0.93022841840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0uS-aQ-BeF" firstAttribute="centerY" secondItem="gVq-wF-149" secondAttribute="centerY" id="AzH-w6-Qur"/>
                             <constraint firstItem="kvf-Km-PfA" firstAttribute="centerX" secondItem="gVq-wF-149" secondAttribute="centerX" id="Ix7-KG-TcC"/>
