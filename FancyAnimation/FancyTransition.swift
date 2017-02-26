@@ -37,7 +37,7 @@ class FancyTransition: NSObject, UIViewControllerAnimatedTransitioning, CAAnimat
         self.sender = sender
     }
     
-    // MARK: UIViewControllerAnimatedTransitioning Protocol Methods
+    // MARK: - UIViewControllerAnimatedTransitioning Protocol Methods
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
