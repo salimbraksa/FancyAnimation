@@ -35,7 +35,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     // MARK: - User Interaction
     
     @IBAction func addButton() {
-        firstViewController.performSegue(withIdentifier: "toB", sender: nil)
+        
+        let identifier = "toB"
+        if firstViewController.shouldPerformSegue(withIdentifier: identifier, sender: nil) {
+            firstViewController.performSegue(withIdentifier: identifier, sender: nil)
+        }
+        
     }
     
 }

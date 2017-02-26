@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return navigationController?.visibleViewController === self
+    }
     
 }
